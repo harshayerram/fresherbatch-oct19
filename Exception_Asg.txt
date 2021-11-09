@@ -1,0 +1,30 @@
+  ASSIGNMENT OF EXCEPTION HANDLING:
+
+1. ARITHMETIC EXCEPTION:
+
+import java.lang.*;
+import java.util.Scanner;
+public class Exception {
+
+	public static void main(String[] args) {
+   Scanner sc= new Scanner(System.in);
+   System.out.println("enter the first number");
+   double i = sc.nextDouble();
+   System.out.println("enter the second number");
+   double j = sc.nextDouble();
+   try 
+   {
+	   double r=i/j;
+	   System.out.println(r);
+   }
+   catch(ArithmeticException e) {
+	   System.out.println(e);
+   }
+   {
+	   System.out.println("denominator cannot be zero");
+	   System.out.println("re-enter the second number");
+	   j= sc.nextDouble();
+	   System.out.println("division is:"+i/j);
+	   
+         }
+	}
