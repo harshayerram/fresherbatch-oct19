@@ -1,0 +1,128 @@
+1. public class Employee {
+    //assume it has 3 variable name(String),salary(double) and id(int)
+    //assume the constructor, getter-setters are there 
+
+    //following is my equals and hashCode implementation
+    public boolean equals(Employee e){
+        return name.equals(e.name);
+    }
+
+    public int hashCode(){
+        return id;
+    }
+}
+
+public static void main(String[] args)
+{
+  Employee e1  = new Employee("Abc", 2.0, 1);
+Employee e2  = new Employee("abc", 3.0, 4);
+Employee e3  = new Employee("XYZ", 4.0, 3);
+Employee e4  = new Employee("Mno", 5.0, 2);
+Employee e5  = new Employee("Abc", 77.0, 1);
+
+Set<Employee> sEmp = new HashSet<Employee>();
+sEmp.add(e1);
+sEmp.add(e2);
+sEmp.add(e3);
+sEmp.add(e4);
+sEmp.add(e5);
+
+for(Employee e : sEmp){
+    System.out.println(e);
+}
+}
+
+2.
+class AddElementsToHashMap {
+	public static void main(String args[])
+	{
+		
+		HashMap<Integer, Double> hm1 = new HashMap<>();
+
+		// Initialization of a HashMap
+		// using Generics
+		HashMap<Integer, Double> hm2
+			= new HashMap<Integer, Double>();
+
+		// Add Elements using put method
+		hm1.put(1, 21.2);
+		hm1.put(2, 22.5);
+		hm1.put(3, 23.6);
+                hm1.put(4, 24.2);
+                hm1.put(5, 25.2);
+                hm1.put(6, 26.2);
+                hm1.put(7, 27.2);
+                hm1.put(8, 28.2);
+                hm1.put(9, 29.2);
+                hm1.put(10,30.2);
+
+		hm2.put(1, 21.2);
+		hm2.put(2, 22.5);
+		hm2.put(3, 23.6);
+                hm2.put(4, 24.2);
+                hm2.put(5, 25.2);
+                hm2.put(6, 26.2);
+                hm2.put(7, 27.2);
+                hm2.put(8, 28.2);
+                hm2.put(9, 29.2);
+                hm2.put(10,30.2);
+
+		
+		System.out.println("Mappings of HashMap hm1 are : "
+						+ hm1);
+		System.out.println("Mapping of HashMap hm2 are : "
+						+ hm2);
+	}
+}
+
+3.
+public class Main {
+public static final <T> void swap (T[] a, int i, int j) {
+T t = a[i];
+a[i] = a[j];
+a[j] = t;
+}
+
+public static final <T> void swap (List<T> l, int i, int j) {
+Collections.<T>swap(l, i, j);
+}
+
+private static void test() {
+String [] a = {"Hello", "Goodbye"};
+swap(a, 0, 1);
+System.out.println("a:"+Arrays.toString(a));
+List<String> l = new ArrayList<String>(Arrays.asList(a));
+swap(l, 0, 1);
+System.out.println("l:"+l);
+}
+public static void main(String...args)
+{
+test();
+}
+
+}
+
+4
+package genericAssignment;
+import java.util.*;
+public class Pair<K, V> {
+	private K key;
+	private V value;
+	
+	public K getKey() {
+		return key;
+	}
+	public void setKey(K key) {
+		this.key = key;
+	}
+	public V getValue() {
+		return value;
+	}
+	public void setValue(V value) {
+		this.value = value;
+	}
+	
+}
+
+
+
